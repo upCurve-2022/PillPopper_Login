@@ -1,12 +1,13 @@
 package com.Pill.Popper.dao.entity;
 
-import com.Pill.Popper.dao.validation.ValidPassword;
+
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
 
 import javax.persistence.*;
+
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
@@ -34,10 +35,10 @@ public class UserEntity {
     @Email
     private String email;
 
-    @ValidPassword
+
     @NonNull
     @NotBlank(message = "New password is mandatory")
-    @Min(5)
+    @Length(min = 8 ,message = "Password should be at least 8 characters")
     private String password;
 
 

@@ -1,6 +1,6 @@
 package com.Pill.Popper.dao.request;
 
-import com.Pill.Popper.dao.validation.ValidPassword;
+
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -18,7 +18,7 @@ public class SignupRequest {
     private String email;
 
     private Set<String> role;
-    @ValidPassword
+
     @NotBlank
     private String password;
 
