@@ -2,6 +2,9 @@ package com.Pill.Popper.dao.request;
 
 
 
+import com.Pill.Popper.dao.validation.ValidPassword;
+import org.hibernate.validator.constraints.Length;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -20,6 +23,7 @@ public class SignupRequest {
     private Set<String> role;
 
     @NotBlank
+    @ValidPassword
     private String password;
 
     public String getUsername() {

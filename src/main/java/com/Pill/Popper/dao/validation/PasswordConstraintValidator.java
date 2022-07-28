@@ -1,4 +1,4 @@
-/*package com.Pill.Popper.dao.validation;
+package com.Pill.Popper.dao.validation;
 
 import org.passay.*;
 
@@ -16,13 +16,13 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
     @Override
     public boolean isValid(String password, ConstraintValidatorContext context) {
         PasswordValidator validator = new PasswordValidator(Arrays.asList(
-                new LengthRule(8),
+                new LengthRule(8,30),
                 new UppercaseCharacterRule(1),
                 new DigitCharacterRule(1),
                 new SpecialCharacterRule(1),
-                new NumericalSequenceRule(3,false),
+                /*new NumericalSequenceRule(3,false),
                 new AlphabeticalSequenceRule(3,false),
-                new QwertySequenceRule(3,false),
+                new QwertySequenceRule(3,false),*/
                 new WhitespaceRule()));
 
         RuleResult result = validator.validate(new PasswordData(password));
@@ -35,6 +35,5 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
                 .addConstraintViolation()
                 .disableDefaultConstraintViolation();
         return false;
-
     }
-}*/
+}
