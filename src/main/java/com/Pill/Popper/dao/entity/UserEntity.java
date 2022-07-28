@@ -37,8 +37,7 @@ public class UserEntity {
 
 
     @NonNull
-    @NotBlank(message = "New password is mandatory")
-    @Length(min = 8 ,message = "Password should be at least 8 characters")
+    @NotBlank
     private String password;
 
 

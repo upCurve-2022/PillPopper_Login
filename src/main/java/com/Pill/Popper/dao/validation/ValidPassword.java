@@ -1,4 +1,4 @@
-/*package com.Pill.Popper.dao.validation;
+package com.Pill.Popper.dao.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -21,4 +21,4 @@ public @interface ValidPassword {
 
     Class<? extends Payload>[] payload() default {};
 
-}*/
+}
